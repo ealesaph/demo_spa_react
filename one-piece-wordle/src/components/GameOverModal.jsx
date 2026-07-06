@@ -16,7 +16,7 @@ const GameOverModal = ({
         <div className="modal-overlay">
             <div className="modal-content">
                 <h2 className="modal-title">
-                    {won ? '¡Lo has logrado!' : '¡Mejor suerte la próxima vez!'}
+                    {won ? '¡Lo has logrado!' : 'Resultado'}
                 </h2>
 
                 {showAnswer && character ? (

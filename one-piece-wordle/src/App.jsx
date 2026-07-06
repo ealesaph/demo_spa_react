@@ -31,21 +31,20 @@ function App() {
   useEffect(() => {
     if (gameOver && attempts > 0) {
       setModalCharacter(targetCharacter);
-      const timer = setTimeout(() => setShowModal(true), 1500);
+      setShowModal(true);
 
       if (won) {
         setConfetti(true);
         const confettiTimer = setTimeout(() => setConfetti(false), 4000);
-        return () => {
-          clearTimeout(timer);
-          clearTimeout(confettiTimer);
-        };
+        return () => clearTimeout(confettiTimer);
       }
 
-      return () => clearTimeout(timer);
+      return undefined;
     }
 
+    setShowModal(false);
     setConfetti(false);
+    setModalCharacter(null);
   }, [gameOver, won, attempts, targetCharacter]);
 
   // Cerrar modal
