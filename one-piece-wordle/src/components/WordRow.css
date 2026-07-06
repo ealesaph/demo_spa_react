@@ -1,0 +1,6 @@
+.word-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    justify-content: center;
+}

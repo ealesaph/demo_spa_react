@@ -1,0 +1,49 @@
+.letter-tile {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid #d3d6da;
+    border-radius: 4px;
+    background-color: white;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.letter-tile.correct {
+    background-color: #6aaa64;
+    border-color: #6aaa64;
+    color: white;
+    animation: flip 0.5s ease;
+}
+
+.letter-tile.present {
+    background-color: #c9b458;
+    border-color: #c9b458;
+    color: white;
+    animation: flip 0.5s ease;
+}
+
+.letter-tile.absent {
+    background-color: #787c7e;
+    border-color: #787c7e;
+    color: white;
+    animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
